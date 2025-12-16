@@ -7,7 +7,6 @@ const model = process.env.MODEL
 
 export async function POST(request) {
 
-    // const { inputValue } = await request.json();
     const body = await request.json()
 
     const client = new OpenAI({ baseURL: endpoint, apiKey: token });
@@ -16,7 +15,7 @@ export async function POST(request) {
         model: model,
         messages: [
             { role: "system", content: "" },
-            { role: "user", content: `Only check this for grammar and spelling: ${body.input_text}` }
+            { role: "user", content: `Check this for grammar and spelling: ${body.input_text}` }
         ],
     });
 

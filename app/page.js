@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <div className='flex flex-col items-center gap-3 mt-3 w-[96%] md:w-[75%] lg:w-[50%] m-auto'>
+    <div className='flex flex-col items-center gap-3 mt-3 w-[96%] md:w-[75%] lg:w-[52%] m-auto'>
       <p className='mt-3.5'>Enter or paste your sentence to check its grammar and spelling.</p>
 
       <div className='w-full relative'>
@@ -43,7 +43,7 @@ function App() {
 
           <textarea onChange={onChangeHandler} value={inputValue} name="input_text" id="input_text"
             className='border border-[#b09e99aa] focus:outline-none w-full h-25 rounded-md px-1 py-0.5 bg-[#302e2e]'></textarea>
-          <button className='cursor-pointer absolute right-2 bottom-11' onClick={() => setInputValue('')} disabled={inputValue === ''}>Clear</button>
+          <button className='cursor-pointer absolute right-2 bottom-11' onClick={() => setInputValue('')} type="button">Clear</button>
 
           <button className='bg-[#3c3636] font-bold px-1.5 py-1 rounded-md cursor-pointer hover:bg-[#463b3b]' type="submit">Check</button>
         </form>
